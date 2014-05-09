@@ -50,7 +50,7 @@ task setup => make {
     owner     => "root",
     group     => "root",
     mode      => 644,
-    on_change => make { notify service => $service; };
+    on_change => make { service $service => "restart"; };
 
   service $service, ensure => "started";
 };
