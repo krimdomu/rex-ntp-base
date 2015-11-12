@@ -8,6 +8,14 @@ A simple module to manage NTP.
 include qw/Rex::NTP::Base/;
 
 task setup => make {
-  Rex::NTP::Base::setup();
+  # @_ required to expose the cli task params to this module's setup() task
+  Rex::NTP::Base::setup(@_);
 };
+```
+
+```bash
+# use module defaults
+$ rex setup
+# explicitly set the service_name option using a task parameter
+$ rex setup --service_name=ntpd
 ```
