@@ -2,5 +2,3 @@ Name: Rex::NTP::Base
 Description: Base module to install and configure ntpd
 Author: jan gehring <jan.gehring@gmail.com>
 License: Apache 2.0
-Require:
-  - Rex::Ext::ParamLookup

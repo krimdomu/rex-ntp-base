@@ -8,7 +8,6 @@
 package Rex::NTP::Base;
 
 use Rex -base;
-use Rex::Ext::ParamLookup;
 
 our %package_map = (
   debian => "ntp",
